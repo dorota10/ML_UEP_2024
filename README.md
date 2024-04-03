@@ -5,6 +5,7 @@ Celem zadania było oczyszczenie danych i znalezienie klasyfikatora, który skut
 Największe znaczenie w macierzy pomyłek będzie miał FN (False Negative), ponieważ chcemy minimalizować przypadki, gdy oszustwo nastąpiło, a nie zostało wychwycone.
 
 # Opis rozwiązania:
+Nie usuwano wartości odstających ze względu na to, że po ich usunięciu, model był bardzo dobrze dopasowany na zbiorze treningowym, ale słabo radził sobie na zbiorze testowym.
 Braki w danych numerycznych uzupełniono metodą KNN. Przeprowadzono dla nich standaryzację.
 Ze względu na duże braki w danych tekstowych zrezygnowano z One Hot Encodingu. Dodano nowe zmienne, które pomagają ocenić, jak wysokie jest prawdopodobieństwo, że gdy występuje dane słowo, to mamy do czynienia z oszustwem.
 Nastepnie użyto następujących klasyfikatorów:
